@@ -11,17 +11,17 @@
     './app.js',
     './style.css',
     './pwa.webmanifest',
-    './favicon.ico',
-    './icon-32.png',
-    './icon-64.png',
-    './icon-96.png',
-    './icon-128.png',
-    './icon-168.png',
-    './icon-180.png',
-    './icon-192.png',
-    './icon-256.png',
-    './icon-512.png',
-    './maskable_icon.png'
+    './icons/favicon.ico',
+    './icons/icon-32.png',
+    './icons/icon-64.png',
+    './icons/icon-96.png',
+    './icons/icon-128.png',
+    './icons/icon-168.png',
+    './icons/icon-180.png',
+    './icons/icon-192.png',
+    './icons/icon-256.png',
+    './icons/icon-512.png',
+    './icons/maskable_icon.png'
   ];
 
   // service worker installation
@@ -56,11 +56,6 @@
   });
   
   // UPDATE CACHE
-
-  var cacheName = 'pwa-v1';
-
-  contentToCache.push('./icon-32.png');
-
 
   self.addEventListener('install', (e) => {
     e.waitUntil((async () => {
